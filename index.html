@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta type="description" content="Mon portfolio personnel">
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- On adapte la taille de la page au mobile -->
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- On importe la liste des icons google -->
+        <link rel="stylesheet" href="styles/styles.css" type="text/css"> <!-- On importe le fichier CSS -->
+
+        <title>Mon portfolio</title>
+
+        <script defer src="js/script.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <button onclick="openMenu()" class="header-menu-mobile">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a href="#contact" class="header-logo">
+                        <img src="img/labelSite.png">
+                    </a>
+                    <ul class="header-menu">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#experiences">Expériences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="slider">
+            <img src="img/sliders/slider1.jpeg" class="slider-background">
+            <div class="slider-content">
+                <h1>Guyon Valentin</h1>
+                <p>Développeur web et logiciel</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="boxed">
+               <div class="flex toColumn mCenter">
+                    <div class="w40 wm100">
+                        <h2>À propos de moi</h2>
+                    </div>
+                    <div class="w60 wm100">
+                        <p>
+                            Je suis un jeune développeur passionné par la création de solutions web et logicielles. <br> 
+                            Mon objectif est de transformer des idées en applications fonctionnelles et intuitives.
+                        </p>
+                        <br>
+                    </div>
+               </div>
+        </div>
+
+        <div class="section">
+            
+        </div>
+
+        <div class="section dark">
+            <div class="boxed text-center">
+                <h2>Découvrez mes skills</h2>
+                <div class="flex toColumn gap20">
+                    <div class="w20 wm100 skill">
+                        <img src="img/skills/logoHTML.png">
+                        <h3>HTML</h3>
+                    </div>
+                        <div class="w20 wm100 skill">
+                        <img src="img/skills/logoPHP.png">
+                        <h3>PHP</h3>
+                    </div>
+                    <div class="w20 wm100 skill">
+                        <img src="img/skills/logoCSS.png">
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="w20 wm100 skill">
+                        <img src="img/skills/logoJS.png">
+                        <h3>JS</h3>
+                    </div>
+                    <div class="w20 wm100 skill">
+                        <img src="img/skills/logoPCSOFT.png">
+                        <h3>Suite Windev</h3>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="boxed text-center">
+                <h2>Mes experiences</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 wm100 experience">
+                        <img src="img/experiences/experience1.png">
+
+                        <!-- <h3>Création site web</h3> -->
+                        <p>Création et maintient de site internet</p>
+                    </div>
+                    <div class="w32 wm100 experience">
+                        <img src="img/experiences/experience2.png">
+
+                        <!-- <h3>Test fonctionnelles</h3> -->
+                        <p>Proposition et execution de test unitaires...</p>
+                    </div>
+                    <div class="w32 wm100 experience">
+                        <img src="img/experiences/experience3.png">
+                        <!-- <h3>Création logiciel</h3> -->
+                        <p>Conception de logiciel bureautique</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="section dark">
+            <div class="boxed text-center">
+                <h2>Contactez-moi</h2>
+                <div class="flex toColumn space-between mgap20">
+                    <div class="w32 wm100 contact">
+                        <span class="material-icons icon">mail</span>
+                        <span class="label">Email</span>
+                        <span class="value">
+                            <a class="value" href="mailto:vguyon.dev@hotmail.com">vguyon.dev@hotmail.com</a>
+                        </span>
+                    </div>
+                    <div class="w32 wm100 contact">
+                        <span class="material-icons icon">phone</span>
+                        <span class="label">Telephone</span>
+                        <span class="value">
+                            <a class="value" href="tel:+33769535560">07.69.53.55.60</a>
+                        </span>
+                    </div>
+                    <div class="w32 wm100 contact">
+                        <span class="material-icons icon">chat</span>
+                        <span class="label">linkedin</span>
+                        <span class="value">
+                            <a class="value" href="https://www.linkedin.com/in/valentin-guyon-509099182/">GUYON Valentin</a>
+                        </span>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+    </body>
+</html>
