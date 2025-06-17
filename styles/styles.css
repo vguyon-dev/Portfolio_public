@@ -293,7 +293,7 @@ body {
 /* ---- PARTIE RESPONSIVE ---- */
 
 /* Media queries pour les écrans de moins de 810px */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 810px) {
     header {
         /*display: none; */ /* Cache le header sur les petits écrans */
         height: 60px !important; 
@@ -419,10 +419,10 @@ body {
         gap: 20px;
     }
 
-    /* ----- Partie ajustement pour mobile, on passe tout les elements à maximum 430px de largeur ----- */
+    /* ----- Partie ajustement pour mobile, on passe tout les elements à maximum 468px de largeur ----- */
 
     .header {
-        max-width: 430px; /* Largeur maximale pour le header */
+        max-width: 468px; /* Largeur maximale pour le header */
     }
 
     .slider {
@@ -431,19 +431,19 @@ body {
     }
 
     .div {
-        max-width: 430px; /* Largeur maximale pour les divs */
+        max-width: 468px; /* Largeur maximale pour les divs */
         margin-inline: auto; /* Centre les divs horizontalement */
     }
 
     .flex {
         flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
-        max-width: 430px; /* Largeur maximale pour les flexbox */
+        max-width: 468px; /* Largeur maximale pour les flexbox */
         margin-inline: auto; /* Centre les flexbox horizontalement */
     } 
 
     .skill {
         width: 100%; /* Prend toute la largeur de la boîte */
-        max-width: 430px; /* Largeur maximale pour les divs */
+        max-width: 468px; /* Largeur maximale pour les divs */
         margin-bottom: 20px; /* Espace en dessous de chaque skill */
     }
 
@@ -464,16 +464,16 @@ body {
     }
 
     .section {
-        max-width: 430px; /* Largeur maximale pour les sections */
+        max-width: 468px; /* Largeur maximale pour les sections */
         margin-inline: auto; /* Centre les sections horizontalement */
     }
 
     .dark {
-        max-width: 430px; /* Largeur maximale pour les sections */
+        max-width: 468px; /* Largeur maximale pour les sections */
     }
 
     .boxed text-center {
-        max-width: 430px; /* Largeur maximale pour les boîtes */
+        max-width: 468px; /* Largeur maximale pour les boîtes */
         text-align: center; /* Centre le texte dans les boîtes */
     }
 
@@ -520,8 +520,4 @@ body {
         color: black; /* Change la couleur du texte au survol */
         text-decoration: underline; /* Ajoute un soulignement au survol */
     }
-
-     /* ----- Partie ajustement pour mobile, on recupère la taille maximale de l'ecran et on ajuste en conséquence les elements ----- */
-
-
 }
