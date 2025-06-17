@@ -358,6 +358,11 @@ body {
         text-wrap: balance; /* Permet au texte de passer à la ligne */
     }
 
+    /* Desactiver le zoom */
+    body {
+        touch-action: manipulation; /* Désactive le zoom sur les appareils tactiles */
+    }
+
     .slider {
         height: 60vh; /* Réduit la hauteur du slider pour les petits écrans */
         width: 63vh; /* Ajuste la largeur du slider pour les petits écrans */
@@ -413,4 +418,112 @@ body {
     .mgap20 {
         gap: 20px;
     }
+
+    /* ----- Partie ajustement pour mobile, on passe tout les elements à maximum 430px de largeur ----- */
+
+    .header {
+        max-width: 430px; /* Largeur maximale pour le header */
+    }
+
+    .slider {
+        width: 100%; /* Prend toute la largeur de la page */
+        height: 60vh; /* Hauteur du slider pour les petits écrans */
+    }
+
+    .div {
+        max-width: 430px; /* Largeur maximale pour les divs */
+        margin-inline: auto; /* Centre les divs horizontalement */
+    }
+
+    .flex {
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+        max-width: 430px; /* Largeur maximale pour les flexbox */
+        margin-inline: auto; /* Centre les flexbox horizontalement */
+    } 
+
+    .skill {
+        width: 100%; /* Prend toute la largeur de la boîte */
+        max-width: 430px; /* Largeur maximale pour les divs */
+        margin-bottom: 20px; /* Espace en dessous de chaque skill */
+    }
+
+    .skill img {
+        width: 80px; /* Réduit la largeur de l'image des skills */
+        height: 80px; /* Réduit la hauteur de l'image des skills */
+    }
+
+    .skill h2 {
+        font-size: 2rem; /* Réduit la taille de la police du titre des skills */
+        text-align: center; /* Centre le texte du titre des skills */
+    }
+
+    /* Ajustement des titres des skills */
+    .skill h3 {
+        font-size: 1.5rem; /* Réduit la taille de la police du titre des skills */
+        text-align: center; /* Centre le texte du titre des skills */
+    }
+
+    .section {
+        max-width: 430px; /* Largeur maximale pour les sections */
+        margin-inline: auto; /* Centre les sections horizontalement */
+    }
+
+    .dark {
+        max-width: 430px; /* Largeur maximale pour les sections */
+    }
+
+    .boxed text-center {
+        max-width: 430px; /* Largeur maximale pour les boîtes */
+        text-align: center; /* Centre le texte dans les boîtes */
+    }
+
+    .experience {
+        width: 100%; /* Prend toute la largeur de la boîte */
+        margin-bottom: 20px; /* Espace en dessous de chaque expérience */
+    }
+
+    .experience h3 {
+        font-size: 1.5rem; /* Réduit la taille de la police du titre des expériences */
+        text-align: center; /* Centre le texte du titre des expériences */
+    }
+
+    .experience img {
+        width: 100%; /* Prend toute la largeur de la boîte */
+        height: 100%; /* Prend toute la hauteur de la boîte */
+        border-radius: 15px; /* Coins arrondis */
+        object-fit: cover; /* Ajuste l'image pour qu'elle couvre tout le conteneur */
+    }
+
+    .contact {
+        width: 100%; /* Prend toute la largeur de la boîte */
+        margin-bottom: 20px; /* Espace en dessous de chaque contact */
+    }
+
+    .contact .icon {
+        font-size: 30px; /* Réduit la taille de l'icône */
+    }
+
+    .contact .label {
+        font-size: 1.2rem; /* Réduit la taille de la police du label */
+    }
+
+    .contact .value {
+        font-size: 1.2rem; /* Réduit la taille de la police de la valeur */
+    }
+
+    .contact a {
+        text-decoration: none; /* Supprime le soulignement du lien */
+        color: #95fbb5; /* Couleur du texte du lien */
+    }
+
+    .contact a:hover {
+        color: black; /* Change la couleur du texte au survol */
+        text-decoration: underline; /* Ajoute un soulignement au survol */
+    }
+
+
+
+
+
+
 }
