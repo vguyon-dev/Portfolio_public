@@ -293,7 +293,7 @@ body {
 /* ---- PARTIE RESPONSIVE ---- */
 
 /* Media queries pour les écrans de moins de 810px */
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 430px) {
     header {
         /*display: none; */ /* Cache le header sur les petits écrans */
         height: 60px !important; 
@@ -520,4 +520,8 @@ body {
         color: black; /* Change la couleur du texte au survol */
         text-decoration: underline; /* Ajoute un soulignement au survol */
     }
+
+     /* ----- Partie ajustement pour mobile, on recupère la taille maximale de l'ecran et on ajuste en conséquence les elements ----- */
+
+
 }
