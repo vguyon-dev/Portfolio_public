@@ -7,13 +7,6 @@
     padding: 0;
 }
 
-/* ---- CORRECTIONS GLOBALES ---- */
-
-html, body {
-    overflow-x: hidden; /* Empêche le scroll horizontal */
-    max-width: 100vw;   /* Empêche les débordements */
-}
-
 /* Style pour les h1*/
 h1 {
     font-size: 4rem; /* Taille de la police */
@@ -301,39 +294,37 @@ body {
 
 /* Media queries pour les écrans de moins de 810px */
 @media screen and (max-width: 810px) {
-    
-    /* ----- HEADER ----- */
-
     header {
-        height: 60px; /* Hauteur réduite du header */
+        /*display: none; */ /* Cache le header sur les petits écrans */
+        height: 60px !important; 
     }
 
-    /* Affiche le bouton de menu mobile */
+    /* Modification du bouton menu */
     .header-menu-mobile {
         display: block;
         position: absolute;
         color: #95fbb5;
         background-color: #18213b;
-        border: none;
+        border: 0px;
         right: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 991; /* Assure que le bouton reste au-dessus */
+        top: 35%;
+        transform: translate(-50, -50%);
+        z-index: 991; /* On met un index élevé pour qu'il passe au dessus des autres elements*/
     }
 
-    /* Repositionne le logo pour les petits écrans */
+    /* Modification de la postion du logo */
     .header-logo {
         position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+        left: -1%;
+        top: -15%;
+        transform: translate(-50, -50%);
     }
 
-    /* Transforme le menu en menu vertical caché */
+    /* Modification de la position du menu*/
     .header-menu {
-        display: none;
+        display: none; /* Cache le header menu par defaut */
         position: fixed;
-        top: 0;
+        top:0;
         left: 0;
         width: 100%;
         background-color: #18213b;
@@ -341,222 +332,192 @@ body {
         align-items: center;
         justify-content: center;
         gap: 20px;
-        z-index: 990;
     }
 
-    /* Active le menu mobile en ajoutant la classe "active" dynamiquement */
     .active {
-        display: flex;
+        display: block;
     }
 
-    /* Style spécifique au bouton "Contact" dans le menu mobile */
+    /* Modification du bouton contact */
     .header-menu li:last-child a {
         margin-top: 10px;
     }
 
-    /* ----- TEXTES ----- */
-
     h1 {
-        font-size: clamp(2.2rem, 5vw, 3rem); /* Taille adaptable */
+        font-size: 3rem; /* Taille de la police pour les petits écrans */
     }
 
     h2 {
-        font-size: clamp(1.5rem, 4vw, 2rem);
-        margin-bottom: 30px;
+        font-size: 2rem; /* Taille de la police pour les petits écrans */
+        margin-bottom: 30px; /* Espace en dessous du titre pour les petits écrans */
     }
 
     p {
-        font-size: 1.4rem;
-        line-height: 1.4em;
-        text-wrap: balance;
+        font-size: 1.4rem; /* Taille de la police pour les petits écrans */
+        line-height: 1.4em; /* Hauteur de ligne pour les petits écrans */
+        text-wrap: balance; /* Permet au texte de passer à la ligne */
     }
 
-    /* ----- SLIDER ----- */
+    /* Desactiver le zoom */
+    body {
+        touch-action: manipulation; /* Désactive le zoom sur les appareils tactiles */
+    }
 
     .slider {
-        height: 60vh; /* Hauteur réduite */
-        width: 100%; /* Prend toute la largeur */
+        height: 60vh; /* Réduit la hauteur du slider pour les petits écrans */
+        width: 63vh; /* Ajuste la largeur du slider pour les petits écrans */
     }
 
     .slider-content {
-        width: 90%;
-        text-align: center;
+        width: 90%; /* Réduit la largeur du contenu du slider */
     }
 
     .slider-content p {
-        margin-top: 20px;
-        font-size: 1.3rem;
-        text-wrap: balance;
+        margin-top: 20px; /* Espace au-dessus du paragraphe */
+        font-size: 1.5rem; /* Réduit la taille de la police du paragraphe */
+        text-wrap: balance; /* Permet au texte de passer à la ligne */
     }
 
     .slider-background {
-        width: 100%;
-    }
-
-    /* ----- STRUCTURE GENERALE ----- */
-
-    .section {
-        width: 100%;
-        padding: 50px 5vw; /* Padding adaptable */
-        max-width: 100%;
-    }
-
-    .boxed {
-        max-width: 90%;
-        margin-inline: auto;
-    }
-
-    .flex {
-        flex-wrap: wrap;
-        gap: 20px; /* Ajoute de l’espace entre les éléments */
-        justify-content: center;
+        width: 100%; /* Assure que l'image de fond prend toute la largeur */
     }
 
     .toColumn {
-        flex-direction: column; /* Colonne sur mobile */
+        flex-direction: column; /* Change la direction du flex en colonne */
     }
 
     .mCenter {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        justify-content: center; /* Centre les éléments verticalement */
+        align-items: center; /* Centre les éléments horizontalement */
+        text-align: center; /* Centre le texte */
     }
 
-    /* Largeurs spécifiques pour les colonnes mobiles */
+    /* Colonne en mobile on veut 50% de largeur */
     .wm50 {
-        width: 50%;
+        width: 50%; /* Réduit la largeur à 50% pour les petits écrans */
     }
 
+    /* Colonne en mobile on veut 100% de largeur */
     .wm100 {
-        width: 100%;
+        width: 100%; /* Prend toute la largeur de l'écran */
     }
 
-    /* ----- BLOC SKILLS ----- */
+    .hm30 {
+        height: 30%; /* Réduit la hauteur pour les petits écrans */
+    } 
+
+    .section {
+        width: 63vh; /* Ajuste la largeur du slider pour les petits écrans */
+        padding: 50px 0; /* Réduit l'espace intérieur de la section */
+    }
+
+    .boxed {
+        max-width: 90%; /* Réduit la largeur maximale des boîtes */
+    }
+
+    .mgap20 {
+        gap: 20px;
+    }
+
+    /* ----- Partie ajustement pour mobile, on passe tout les elements à maximum 468px de largeur ----- */
+
+    .header {
+        max-width: 468px; /* Largeur maximale pour le header */
+    }
+
+    .slider {
+        width: 100%; /* Prend toute la largeur de la page */
+        height: 60vh; /* Hauteur du slider pour les petits écrans */
+    }
+
+    .div {
+        max-width: 468px; /* Largeur maximale pour les divs */
+        margin-inline: auto; /* Centre les divs horizontalement */
+    }
+
+    .flex {
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+        max-width: 468px; /* Largeur maximale pour les flexbox */
+        margin-inline: auto; /* Centre les flexbox horizontalement */
+    } 
 
     .skill {
-        width: 100%;
-        max-width: 468px;
-        margin: 20px auto;
-        text-align: center;
+        width: 100%; /* Prend toute la largeur de la boîte */
+        max-width: 468px; /* Largeur maximale pour les divs */
+        margin-bottom: 20px; /* Espace en dessous de chaque skill */
     }
 
     .skill img {
-        width: 80px;
-        height: 80px;
+        width: 80px; /* Réduit la largeur de l'image des skills */
+        height: 80px; /* Réduit la hauteur de l'image des skills */
     }
 
     .skill h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Réduit la taille de la police du titre des skills */
+        text-align: center; /* Centre le texte du titre des skills */
     }
 
+    /* Ajustement des titres des skills */
     .skill h3 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Réduit la taille de la police du titre des skills */
+        text-align: center; /* Centre le texte du titre des skills */
     }
 
-    /* ----- BLOC EXPERIENCES ----- */
+    .section {
+        max-width: 468px; /* Largeur maximale pour les sections */
+        margin-inline: auto; /* Centre les sections horizontalement */
+    }
+
+    .dark {
+        max-width: 468px; /* Largeur maximale pour les sections */
+    }
+
+    .boxed text-center {
+        max-width: 468px; /* Largeur maximale pour les boîtes */
+        text-align: center; /* Centre le texte dans les boîtes */
+    }
 
     .experience {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100%; /* Prend toute la largeur de la boîte */
+        margin-bottom: 20px; /* Espace en dessous de chaque expérience */
     }
 
     .experience h3 {
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 1.5rem; /* Réduit la taille de la police du titre des expériences */
+        text-align: center; /* Centre le texte du titre des expériences */
     }
 
     .experience img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-        object-fit: cover;
+        width: 100%; /* Prend toute la largeur de la boîte */
+        height: 100%; /* Prend toute la hauteur de la boîte */
+        border-radius: 15px; /* Coins arrondis */
+        object-fit: cover; /* Ajuste l'image pour qu'elle couvre tout le conteneur */
     }
 
-    /* ----- BLOC CONTACT ----- */
-
     .contact {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100%; /* Prend toute la largeur de la boîte */
+        margin-bottom: 20px; /* Espace en dessous de chaque contact */
     }
 
     .contact .icon {
-        font-size: 30px;
+        font-size: 30px; /* Réduit la taille de l'icône */
     }
 
-    .contact .label,
+    .contact .label {
+        font-size: 1.2rem; /* Réduit la taille de la police du label */
+    }
+
     .contact .value {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Réduit la taille de la police de la valeur */
     }
 
     .contact a {
-        text-decoration: none;
-        color: #95fbb5;
+        text-decoration: none; /* Supprime le soulignement du lien */
+        color: #95fbb5; /* Couleur du texte du lien */
     }
 
     .contact a:hover {
-        color: black;
-        text-decoration: underline;
-    }
-}
-
-/* ----- OPTIMISATION POUR LES ECRANS < 375px ----- */
-
-@media screen and (max-width: 375px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    p,
-    .slider-content p {
-        font-size: 1.1rem;
-    }
-
-    .skill img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .skill h3,
-    .experience h3 {
-        font-size: 1.2rem;
-    }
-
-    .header-menu-mobile {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-
-   /* ----- Centrage des sections sur les petits écrans ----- */
-    .section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;       /* Centre les éléments horizontalement */
-        text-align: center;        /* Centre le texte */
-        padding: 30px 5vw;         /* Padding réduit et fluide */
-        margin-inline: auto;       /* Centre la section dans la page */
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Centrage des éléments internes type contact */
-    .contact {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        max-width: 320px;
-    }
-
-    /* Centrage des icônes, labels et valeurs */
-    .contact .icon,
-    .contact .label,
-    .contact .value {
-        text-align: center;
-        margin-inline: auto;
+        color: black; /* Change la couleur du texte au survol */
+        text-decoration: underline; /* Ajoute un soulignement au survol */
     }
 }
