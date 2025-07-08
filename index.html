@@ -1,151 +1,280 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta type="description" content="Mon portfolio personnel">
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- On adapte la taille de la page au mobile -->
-        
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- On importe la liste des icons google -->
-        <link rel="stylesheet" href="styles/styles.css" type="text/css"> <!-- On importe le fichier CSS -->
-
-        <title>Mon portfolio</title>
-
-        <script defer src="js/script.js"></script>
-    </head>
-    
-    <body>
-        <header>
-            <div class="boxed">
-                <div class="flex aligncenter space-between">
-                    <button onclick="openMenu()" class="header-menu-mobile">
-                        <span class="material-icons">menu</span>
-                    </button>
-                    <a href="#contact" class="header-logo">
-                        <img src="./img/labelSite.png">
-                    </a>
-                    <ul class="header-menu">
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#skills">Compétences</a></li>
-                        <li><a href="#experiences">Expériences</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-
-        <div class="slider">
-            <img src="img/sliders/slider1.jpeg" class="slider-background">
-            <div class="slider-content">
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Développeur Web & Logiciel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
                 <h1>Guyon Valentin</h1>
-                <p>Développeur web et logiciel</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <!-- <li><a href="#certifications">Certifications</a></li> -->
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <span class="theme-text">Thème</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Développeur Web & Logiciel</h2>
+                <p>Passionné par la création de solutions innovantes et performantes</p>
+                <br>
+                <a href="#contact" class="cta-button">Me contacter</a>
             </div>
         </div>
+    </section>
 
-        <div class="section" id="about">
-            <div class="boxed">
-               <div class="flex toColumn mCenter">
-                    <div class="w40 wm100">
-                        <h2>À propos de moi</h2>
-                    </div>
-                    <div class="w60 wm100">
-                        <p>
-                            Je suis un jeune développeur passionné par la création de solutions web et logicielles. <br> 
-                            Mon objectif est de transformer des idées en applications fonctionnelles et intuitives. <br>
-                            J'aime apprendre a utilisé de nouvelle technologie et m'ameliorer constament avec divers projet.
-                        </p>
-                        <br>
-                    </div>
-               </div>
-        </div>
-
-        <div class="section">
-            
-        </div>
-
-        <div class="section dark"   id="skills">
-            <div class="boxed text-center">
-                <h2>Découvrez mes skills</h2>
-                <div class="flex toColumn gap20">
-                    <div class="w20 wm100 skill">
-                        <img src="img/skills/logoHTML.png">
-                        <h3>HTML</h3>
-                    </div>
-                        <div class="w20 wm100 skill">
-                        <img src="img/skills/logoPHP.png">
-                        <h3>PHP</h3>
-                    </div>
-                    <div class="w20 wm100 skill">
-                        <img src="img/skills/logoCSS.png">
-                        <h3>CSS</h3>
-                    </div>
-                    <div class="w20 wm100 skill">
-                        <img src="img/skills/logoJS.png">
-                        <h3>JS</h3>
-                    </div>
-                    <div class="w20 wm100 skill">
-                        <img src="img/skills/logoPCSOFT.png">
-                        <h3>Suite Windev</h3>
-                    </div>
-               </div>
-            </div>
-        </div>
-
-        <div class="section" id="experiences">
-            <div class="boxed text-center">
-                <h2>Mes experiences</h2>
-                <div class="flex wrap gap20 space-between">
-                    <div class="w32 wm100 experience">
-                        <img src="img/experiences/experience1.png">
-
-                        <!-- <h3>Création site web</h3> -->
-                        <p>Création et maintient de site internet</p>
-                    </div>
-                    <div class="w32 wm100 experience">
-                        <img src="img/experiences/experience2.png">
-
-                        <!-- <h3>Test fonctionnelles</h3> -->
-                        <p>Proposition et execution de test unitaires...</p>
-                    </div>
-                    <div class="w32 wm100 experience">
-                        <img src="img/experiences/experience3.png">
-                        <!-- <h3>Création logiciel</h3> -->
-                        <p>Conception de logiciel bureautique</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Développeur Web & Logiciel passionné spécialisé dans la création de solutions web et logicielles. Expert dans l'utilisation de la suite PC SOFT et les technologies web modernes.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-code"></i>
+                            <h3>2</h3>
+                            <p>Années d'expérience Web</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-mobile"></i>
+                            <h3>2</h3>
+                            <p>Années d'expérience Mobile</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>3</h3>
+                            <p>Années d'expérience logiciel bureautique</p>
+                        </div>
+                        <!-- 
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <h3>20+</h3>
+                            <p>Clients satisfaits</p>
+                        </div>
+                        -->
                     </div>
                 </div>
-            </div>  
-        </div>
-
-        <div class="section dark" id="contact">
-            <div class="boxed text-center">
-                <h2>Contactez-moi</h2>
-                <div class="flex toColumn space-between mgap20">
-                    <div class="w32 wm100 contact">
-                        <span class="material-icons icon">mail</span>
-                        <span class="label">Email</span>
-                        <span class="value">
-                            <a class="value" href="mailto:vguyon.dev@hotmail.com">vguyon.dev@hotmail.com</a>
-                        </span>
-                    </div>
-                    <div class="w32 wm100 contact">
-                        <span class="material-icons icon">phone</span>
-                        <span class="label">Telephone</span>
-                        <span class="value">
-                            <a class="value" href="tel:+33769535560">07.69.53.55.60</a>
-                        </span>
-                    </div>
-                    <div class="w32 wm100 contact">
-                        <span class="material-icons icon">chat</span>
-                        <span class="label">linkedin</span>
-                        <span class="value">
-                            <a class="value" href="https://www.linkedin.com/in/valentin-guyon-509099182/">GUYON Valentin</a>
-                        </span>
-                    </div>
-               </div>
             </div>
         </div>
-        <footer class="text-center">
-            <p>&copy; 2025 Portfolio de GUYON Valentin. Tous droits réservés.</p>
-        </footer>
-    </body>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Expérience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Développeur Full Stack</h3>
+                    <!-- <p class="company">Auto Formation</p> -->
+                    <p class="period"></p>
+                    <div class="responsibilities">
+                        <p>Développement d'applications Windows/Service avec Windev</p>
+                        <p>Création de solutions web</p>
+                        <p>Maintenance et évolution des applications existantes</p>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Développeur Windev Mobile</h3>
+                  <!--   <p class="company">Entreprise Baillindustrie</p> -->
+                    <p class="period"></p>
+                    <div class="responsibilities">
+                        <p>Mise en production des applications sur des PDA</p>
+                        <p>Optimisation des performances</p>
+                        <p>Communication entre appareils et serveur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section 
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Windev Expert</h3>
+                    <p>PC SOFT</p>
+                    <p class="year">2023</p>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>PHP Developer</h3>
+                    <p>OpenClassrooms</p>
+                    <p class="year">2022</p>
+                </div>
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>JavaScript Expert</h3>
+                    <p>Udemy</p>
+                    <p class="year">2021</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Suite PC SOFT</h3>
+                    <p>Windev / Windev Mobile / HFSQL</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <p>Développement web moderne</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-php"></i>
+                    <h3>PHP</h3>
+                    <p>Développement backend</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <p>Design responsive</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interactivité avancée</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Serveur</h3>
+                    <p>Installation et Mise en pre-prod et prod</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-user"></i>
+                    <h3>Utilisateur</h3>
+                    <p>Installation et maintenance poste utilisateur</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Auto Formation</h3>
+                    <p>Auto formation en développement web et logiciel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projets</h2>
+            <div class="projects-grid">
+                <!-- Projets fictifs -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>ERP / Service Windows</h3>
+                        <p>Gestion des commandes clients ou fournisseurs ainsi qu'un suivi SAV</p>
+                        <div class="project-tags">
+                            <span>Windev</span>
+                            <span>HFSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>BAILL_ATELIER</h3>
+                        <p>Facilité la préparation des commandes et des retours ainsi que l'evolution du stock</p>
+                        <div class="project-tags">
+                            <span>Windev Mobile</span>
+                            <span>HFSQL</span>
+                            <span>Android</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Portfolio Actuel</h3>
+                        <p>Mise en place d'un portfolio moderne et responsive</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/guyon-valentin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.github.com/vguyon-dev"><i class="fab fa-github"></i></a>
+                </div>
+                <p style="text-align: center;">&copy; 2025 Guyon Valentin - Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
