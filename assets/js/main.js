@@ -111,13 +111,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Formulaire de contact
     const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            // Ici vous pouvez ajouter la logique pour envoyer le formulaire
-            // Pour l'instant, on affiche juste un message de succès
-            alert('Message envoyé avec succès !');
-            contactForm.reset();
+            
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    successMessage.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Cacher le message après 3 secondes
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                } else {
+                    alert('Une erreur est survenue lors de l\'envoi du message.');
+                }
+            } catch (error) {
+                console.error('Erreur:', error);
+                alert('Une erreur est survenue lors de l\'envoi du message.');
+            }
         });
     }
 });
